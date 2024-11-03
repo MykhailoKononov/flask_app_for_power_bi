@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set the Date Period</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+        }
+
+        /* Container for form */
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 350px;
+        }
+
+        /* Heading */
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        /* Form style */
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Buttons style */
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-today {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        .btn-today:hover {
+            background-color: #1976D2;
+        }
+
+        /* Style for loading screen */
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loadingMessage {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Divider */
+        .divider {
+            margin: 20px 0;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loadingOverlay">
+        <div id="loadingMessage">Loading, please wait...</div>
+    </div>
+
+    <div class="container">
+        <h2>Update Exchange Rate</h2>
+
+        <!-- Form for updating rate within some period -->
+        <form method="POST" action="{{ url_for('update_rate') }}" onsubmit="showLoading()">
+            <label for="update_from">Update From:</label>
+            <input type="text" id="update_from" name="update_from" placeholder="YYYY-MM-DD">
+
+            <label for="update_to">Update To:</label>
+            <input type="text" id="update_to" name="update_to" placeholder="YYYY-MM-DD">
+
+            <input type="submit" class="btn btn-submit" value="Submit Period Update">
+        </form>
+
+        <div class="divider">OR</div>
+
+        <!-- Form for updating today's rate -->
+        <form method="POST" action="{{ url_for('update_today_rate') }}" onsubmit="showLoading()">
+            <input type="submit" class="btn btn-today" value="Update Rate for Today">
+        </form>
+    </div>
+
+    <script>
+        function showLoading() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

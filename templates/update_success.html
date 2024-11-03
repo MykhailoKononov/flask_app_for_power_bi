@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Successful</title>
+    <style>
+        /* Centering content and background style */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        /* Container */
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 400px;
+        }
+
+        /* Heading */
+        h1 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph */
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 0;
+        }
+
+        /* Link to Google Sheets */
+        a {
+            color: #2196F3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #1976D2;
+        }
+
+        /* Return home button */
+        .btn-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-home:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Successful!</h1>
+        <p>The exchange rate has been updated successfully.</p>
+        <p>View the updated Google Sheet <a href="{{ sheet_url }}" target="_blank">here</a>.</p>
+
+        <!-- Return home button -->
+        <a href="/" class="btn-home">Return to Home</a>
+    </div>
+</body>
+</html>

@@ -37,11 +37,11 @@ The task involves:
 For full access to the dashboard, download the files below:
 
 - **Power BI Report (.pbix)**:  
-  [Download PBIX File](https://github.com/MykhailoKononov/flask_app_for_power_bi/blob/master/Project_power_bi_%26_flask.pbix)  
+  [Download PBIX File](https://github.com/MykhailoKononov/flask_app_for_power_bi/blob/main/Project_power_bi_%26_flask.pbix)  
   *(Requires Power BI Desktop to open)*
 
 - **PDF Report**:  
-  [Download PDF Report](https://github.com/MykhailoKononov/flask_app_for_power_bi/blob/master/Project_power_bi_%26_flask.pdf)  
+  [Download PDF Report](https://github.com/MykhailoKononov/flask_app_for_power_bi/blob/main/Project_power_bi_%26_flask.pdf)  
   *(For those without Power BI)*
 ---
 

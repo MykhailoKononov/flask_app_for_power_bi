@@ -64,8 +64,8 @@ For full access to the dashboard, download the files below:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/exchange-rate-updater.git
-    cd exchange-rate-updater
+    git clone https://github.com/MykhailoKononov/flask_app_for_power_bi.git
+    cd flask_app_for_power_bi
     ```
 
 2. **Install Dependencies**:
